@@ -1,4 +1,4 @@
-function AddGun(props) {
+function AddSticker(props) {
 	return (
 		<button className="btn-primary" type="submit" id="addGun">
 			Add
@@ -6,4 +6,4 @@ function AddGun(props) {
 	);
 }
 
-export default AddGun;
+export default AddSticker;
