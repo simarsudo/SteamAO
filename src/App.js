@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Home from "./Pages/Home";
 import LinkGenerator from "./Pages/LinkGenerator";
 import ItemsComparison from "./Pages/ItemsComparison";
@@ -10,17 +10,19 @@ function App() {
 		<div>
 			<Navbar />
 			<main>
-				<Route path="/" exact>
-					<Home />
-				</Route>
+				<Switch>
+					<Route path="/" exact>
+						<Home />
+					</Route>
 
-				<Route path="/link-generator">
-					<LinkGenerator />
-				</Route>
+					<Route path="/link-generator" exact>
+						<LinkGenerator />
+					</Route>
 
-				<Route path="/Items-Comparison">
-					<ItemsComparison />
-				</Route>
+					<Route path="/Items-Comparison">
+						<ItemsComparison />
+					</Route>
+				</Switch>
 			</main>
 		</div>
 	);
