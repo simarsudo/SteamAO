@@ -8,7 +8,7 @@ function SelectTypeCS(props) {
 	}
 
 	return (
-		<div className="flex h-1/4 items-center">
+		<div className="flex h-[15%] items-center">
 			<span className="w-1/3">Type</span>
 			<select className="h-10 w-2/3">
 				<option onClick={gunType} value="Gun">
