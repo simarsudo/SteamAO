@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar(props) {
 	return (
-		<nav className="h-[7vh] w-screen bg-slate-800">
+		<nav className="h-[8vh] w-screen bg-slate-800">
 			<ul className="flex h-full flex-row">
 				<li className="h-full px-4 text-lg text-white">
 					<NavLink className="flex h-full items-center justify-center " to="/">

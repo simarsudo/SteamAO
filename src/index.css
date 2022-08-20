@@ -15,3 +15,29 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
+
+@layer base {
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="number"],
+	input[type="url"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="search"],
+	input[type="tel"],
+	select,
+	select[multiple],
+	textarea,
+	select {
+		@apply rounded border-gray-300 ring-indigo-400 focus:border-indigo-500 focus:ring-indigo-500;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		@apply rounded border-gray-300 text-indigo-500 focus:ring-indigo-500;
+	}
+}

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import LinkGeneratorMain from "../Components/Containers/LinkGeneratorMain";
 import Sidebar from "../Components/Navbar/Sidebar";
+import GameFormContainer from "../Components/Containers/GameFormContainer";
 import CSGO from "../Components/Games/CSGO";
 import TF2 from "../Components/Games/TF2";
+
+// link-generator page main render
 
 function LinkGenerator(props) {
 	document.title = "Link Generator";
@@ -18,7 +21,7 @@ function LinkGenerator(props) {
 	return (
 		<LinkGeneratorMain>
 			<Sidebar activeGame={currentGame} changeGame={setCurrentGame} />
-			{renderGameComponent}
+			{<GameFormContainer gameForm={renderGameComponent} />}
 		</LinkGeneratorMain>
 	);
 }

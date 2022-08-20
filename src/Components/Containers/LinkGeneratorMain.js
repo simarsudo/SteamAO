@@ -1,6 +1,6 @@
 function LinkGeneratorMain(props) {
 	return (
-		<div className="grid h-[93vh] w-full grid-cols-12 grid-rows-6 bg-slate-700">
+		<div className="container grid h-[92vh] w-full grid-cols-12 grid-rows-12 bg-slate-700">
 			{props.children}
 		</div>
 	);

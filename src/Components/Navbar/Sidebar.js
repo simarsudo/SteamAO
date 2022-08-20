@@ -13,7 +13,7 @@ function Sidebar(props) {
 	}
 
 	return (
-		<nav className="col-span-1 row-start-1 row-end-7 flex h-full w-1/2 flex-col items-center bg-slate-800 py-8">
+		<nav className="col-span-1 row-start-1 row-end-[13] flex h-full w-2/3 flex-col items-center bg-slate-800 py-8">
 			<ul className="text-l relative flex h-full w-full flex-col items-center justify-start text-white">
 				<li
 					onClick={CurrentlyCSGO}
