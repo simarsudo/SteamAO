@@ -1,6 +1,6 @@
 function StatTrak(props) {
 	return (
-		<div className="flex">
+		<div className="flex items-center">
 			<span className="w-1/3">StatTrak™</span>
 			<input
 				className="h-5 w-5"

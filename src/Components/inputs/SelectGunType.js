@@ -1,6 +1,6 @@
 function SelectGunType(props) {
 	return (
-		<div className="flex">
+		<div className="flex items-center">
 			<span className="w-1/3">Select Gun</span>
 			<select className="w-2/3">
 				<option value="" disabled selected>
