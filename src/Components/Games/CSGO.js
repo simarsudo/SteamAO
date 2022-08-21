@@ -6,10 +6,20 @@ import CSStickerForm from "../Forms/CSStickerForm";
 function CSGO(props) {
 	let [itemType, setItemType] = useState("Gun");
 
-	let renderForm = <CSGunForm />;
+	let renderForm = (
+		<CSGunForm
+			setSummaryList={props.setSummaryList}
+			summaryList={props.summaryList}
+		/>
+	);
 
 	if (itemType === "Sticker") {
-		renderForm = <CSStickerForm />;
+		renderForm = (
+			<CSStickerForm
+				setSummaryList={props.setSummaryList}
+				summaryList={props.summaryList}
+			/>
+		);
 	}
 
 	return (

@@ -20,7 +20,28 @@ function CSGunForm(props) {
 	function GunFormHandler(event) {
 		event.preventDefault();
 
-		console.log(gunType, gunName, isStatTrak, gunCondition);
+		const conditions = [];
+
+		for (let key in gunCondition) {
+			if (gunCondition[key]) {
+				conditions.push(key);
+			}
+		}
+
+		const newData = {
+			Name: `${gunName}`,
+			ST: isStatTrak,
+			Type: gunType,
+			Conditions: [...conditions],
+		};
+
+		console.log(newData);
+		props.setSummaryList(() => {
+			const newList = [...props.summaryList];
+			newList.push(newData);
+
+			return newList;
+		});
 	}
 
 	return (
