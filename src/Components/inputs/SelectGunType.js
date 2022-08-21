@@ -1,11 +1,12 @@
 function SelectGunType(props) {
+	function optionHandler(event) {
+		props.setGun(event.target.value);
+	}
+
 	return (
 		<div className="flex items-center">
 			<span className="w-1/3">Select Gun</span>
-			<select className="w-2/3">
-				<option value="" disabled selected>
-					Select Gun
-				</option>
+			<select onChange={optionHandler} className="w-2/3">
 				<option value="AK-47">AK-47</option>
 				<option value="AUG">AUG</option>
 				<option value="AWP">AWP</option>
