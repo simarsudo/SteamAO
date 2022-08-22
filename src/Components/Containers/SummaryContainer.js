@@ -7,7 +7,10 @@ function SummaryContainer(props) {
 		<div className="container h-full w-1/2 overflow-y-scroll rounded bg-slate-200">
 			<table className="w-full">
 				<TableHeading></TableHeading>
-				<TableBody items={props.items}></TableBody>
+				<TableBody
+					CSItemType={props.CSItemType}
+					items={props.items}
+				></TableBody>
 			</table>
 		</div>
 	);

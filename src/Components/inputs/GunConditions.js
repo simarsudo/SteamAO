@@ -3,7 +3,7 @@ function GunConditions(props) {
 	const spanClasses = "w-1/2";
 
 	function checkboxHandler(event) {
-		props.gunConditionsList(() => {
+		props.setgunConditionsList(() => {
 			const gCondition = { ...props.gunConditions };
 			gCondition[event.target.name] = event.target.checked;
 			return { ...gCondition };

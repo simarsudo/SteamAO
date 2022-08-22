@@ -9,9 +9,15 @@ const InitialData = [];
 
 function GameFormContainer(props) {
 	const [summaryList, setSummaryList] = useState(InitialData);
+	const [itemType, setItemType] = useState("Gun");
 
 	let renderGameForm = (
-		<CSGO setSummaryList={setSummaryList} summaryList={summaryList} />
+		<CSGO
+			itemType={itemType}
+			setItemType={setItemType}
+			setSummaryList={setSummaryList}
+			summaryList={summaryList}
+		/>
 	);
 
 	if (props.currentGame === "TF2") {
@@ -23,7 +29,7 @@ function GameFormContainer(props) {
 	return (
 		<div className="row-end-11 container col-start-3 col-end-12 row-start-2 row-end-[12] flex flex-row justify-evenly gap-8 rounded-lg bg-white p-4">
 			{renderGameForm}
-			<SummaryContainer items={summaryList} />
+			<SummaryContainer CSItemType={itemType} items={summaryList} />
 		</div>
 	);
 }

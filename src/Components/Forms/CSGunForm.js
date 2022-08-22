@@ -29,13 +29,13 @@ function CSGunForm(props) {
 		}
 
 		const newData = {
-			Name: `${gunName}`,
+			ItemType: "Gun",
+			Name: gunName,
 			ST: isStatTrak,
 			Type: gunType,
-			Conditions: [...conditions],
+			Grade: [...conditions],
 		};
 
-		console.log(newData);
 		props.setSummaryList(() => {
 			const newList = [...props.summaryList];
 			newList.push(newData);
@@ -53,7 +53,7 @@ function CSGunForm(props) {
 			<TextInput name="Gun Name" setName={setGunName} />
 			<GunConditions
 				gunConditions={gunCondition}
-				gunConditionsList={setGunCondition}
+				setgunConditionsList={setGunCondition}
 			/>
 			<StatTrak statTrak={isStatTrak} setStattrak={setisStattrak} />
 			<AddGun />

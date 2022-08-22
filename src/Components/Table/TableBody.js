@@ -14,10 +14,13 @@ function TableBody(props) {
 			{props.items.map((item, index) => (
 				<Tr
 					key={index}
+					CSItemType={item["ItemType"]}
 					itemName={item["Name"]}
 					itemType={item["Type"]}
-					itemGrade={item["Conditions"]}
+					itemGrade={item["Grade"]}
 					itemST={item["ST"]}
+					itemIsTS={item["isTS"]}
+					itemTournamentName={item["TournamentName"]}
 				></Tr>
 			))}
 		</tbody>

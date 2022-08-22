@@ -1,10 +1,10 @@
-import { useState } from "react";
 import SelectTypeCS from "../inputs/SelectTypeCS";
 import CSGunForm from "../Forms/CSGunForm";
 import CSStickerForm from "../Forms/CSStickerForm";
 
 function CSGO(props) {
-	let [itemType, setItemType] = useState("Gun");
+	const itemType = props.itemType;
+	const setItemType = props.setItemType;
 
 	let renderForm = (
 		<CSGunForm

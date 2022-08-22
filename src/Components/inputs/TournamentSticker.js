@@ -1,7 +1,10 @@
 import { useState } from "react";
 
 function TournamentSticker(props) {
-	let [isChecked, setIsChecked] = useState(false);
+	const isChecked = props.isTS;
+	const setIsChecked = props.setIsTS;
+	const setTname = props.setTname;
+
 	console.log(isChecked);
 
 	function changeInputState() {
@@ -9,6 +12,12 @@ function TournamentSticker(props) {
 			return setIsChecked(true);
 		}
 		setIsChecked(false);
+		setTname(setTname);
+		console.log(props.Tname);
+	}
+
+	function handleTName(event) {
+		setTname(event.target.value);
 	}
 
 	return (
@@ -24,6 +33,7 @@ function TournamentSticker(props) {
 				/>
 			</div>
 			<input
+				onChange={handleTName}
 				className="w-3/6"
 				type="text"
 				id="tournamentName"
