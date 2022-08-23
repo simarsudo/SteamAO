@@ -11,11 +11,11 @@ function App() {
 			<Navbar />
 			<main>
 				<Switch>
-					<Route path="/" exact>
+					<Route path="/" exact={true}>
 						<Home />
 					</Route>
 
-					<Route path="/link-generator" exact>
+					<Route path="/link-generator">
 						<LinkGenerator />
 					</Route>
 

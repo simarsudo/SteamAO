@@ -1,22 +1,15 @@
 function SelectTypeCS(props) {
-	function gunType() {
-		return props.settype("Gun");
-	}
-
-	function stickerType() {
-		return props.settype("Sticker");
-	}
-
 	return (
 		<div className="flex h-[15%] items-center">
 			<span className="w-1/3">Type</span>
-			<select className="h-10 w-2/3">
-				<option onClick={gunType} value="Gun">
-					Gun
-				</option>
-				<option onClick={stickerType} value="Sticker">
-					Sticker
-				</option>
+			<select
+				onChange={(event) => {
+					props.settype(event.target.value);
+				}}
+				className="h-10 w-2/3"
+			>
+				<option value="Gun">Gun</option>
+				<option value="Sticker">Sticker</option>
 			</select>
 		</div>
 	);
